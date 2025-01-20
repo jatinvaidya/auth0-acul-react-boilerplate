@@ -17,7 +17,7 @@ const LoginIdScreen: React.FC = () => {
 		console.log(`branding.client(): ${JSON.stringify(loginIdManager.client)}`);
 		console.log(
 			`branding.client().getMetadata(): ${JSON.stringify(
-				loginIdManager.client.getMetadata()
+				loginIdManager.client.getMetadata()?.["brand_code"]
 			)}`
 		);
 
