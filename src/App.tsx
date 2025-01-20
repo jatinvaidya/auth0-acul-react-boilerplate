@@ -10,11 +10,16 @@ const LoginIdScreen: React.FC = () => {
 		console.log("Login button clicked!!");
 		const loginIdManager = new LoginId();
 		console.log(
-			`branding.getSettions(): ${JSON.stringify(
+			`branding.getSettings(): ${JSON.stringify(
 				loginIdManager.branding.getSettings()
 			)}`
 		);
 		console.log(`branding.client(): ${JSON.stringify(loginIdManager.client)}`);
+		console.log(
+			`branding.client().getMetadata(): ${JSON.stringify(
+				loginIdManager.client.getMetadata()
+			)}`
+		);
 
 		loginIdManager.login({
 			username: usernameRef.current?.value || "",
