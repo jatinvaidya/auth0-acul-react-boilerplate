@@ -9,6 +9,13 @@ const LoginIdScreen: React.FC = () => {
 	const handleLogin = (): void => {
 		console.log("Login button clicked!!");
 		const loginIdManager = new LoginId();
+		console.log(
+			`branding.getSettions(): ${JSON.stringify(
+				loginIdManager.branding.getSettings()
+			)}`
+		);
+		console.log(`branding.client(): ${JSON.stringify(loginIdManager.client)}`);
+
 		loginIdManager.login({
 			username: usernameRef.current?.value || "",
 		});
